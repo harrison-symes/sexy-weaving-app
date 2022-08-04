@@ -5,13 +5,11 @@ import { MAX_WIDTH, MIN_WIDTH, MAX_HEIGHT, MIN_HEIGHT } from "../constants/setti
 export interface ISettingsState {
     width: number;
     height: number;
-    isConfirmed: boolean;
 } 
 
 export const initialState: ISettingsState = {
     width: 8,
     height: 8,
-    isConfirmed: false
 }
 
 export const settingsReducer = reducerWithInitialState(initialState)
@@ -59,7 +57,3 @@ export const settingsReducer = reducerWithInitialState(initialState)
             height: newHeight
         }
     })
-    .case(confirmSettings, (state) => ({
-        ...state,
-        isConfirmed: true
-    }))

@@ -4,11 +4,11 @@ import './App.css';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from "./reducers/index"
 import { Provider } from 'react-redux';
-import WidthAdjuster from './components/Controls/WidthAdjuster';
-import HeightAdjuster from './components/Controls/HeightAdjuster';
+import WidthAdjuster from './components/ScaleControls/WidthAdjuster';
+import HeightAdjuster from './components/ScaleControls/HeightAdjuster';
 import ScaleBoard from './components/Board/ScaleBoard';
-import BoardScale from './pages/BoardScale';
-import BoardFlip from './pages/BoardFlip';
+import SelectScale from './pages/SelectScale';
+import SelectPattern from './pages/SelectPattern';
 import Router from './pages/Router';
 
 function App() {

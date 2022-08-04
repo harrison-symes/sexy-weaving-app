@@ -1,27 +1,22 @@
 import { useDispatch } from "react-redux"
-import { flipAllDown, flipAllUp } from "../../actions/pattern.actions"
+import { confirmColours } from "../../actions/colours.actions"
 
-const FlipControls = () => {
+const PatternControls = () => {
     const dispatch = useDispatch()
 
-    const onConfirm = () => {
-
-    }
-
-    const onFlipAllUp = () => dispatch(flipAllUp())
-    const onFlipAllDown = () => dispatch(flipAllDown())
+    const onConfirm = () => dispatch(confirmColours())
 
     return (
         <div className="board-controls">
-            <div className="board-control__buttons">
+            {/* <div className="board-control__buttons">
                 <button onClick={onFlipAllUp} className="board-control__button--large">Flip all</button>
-            </div>
+            </div> */}
             <button onClick={onConfirm} className="board-control__submit">Confirm</button>
-            <div className="board-control__buttons">
+            {/* <div className="board-control__buttons">
                 <button onClick={onFlipAllDown} className="board-control__button--large">Unflip all</button>
-            </div>
+            </div> */}
         </div>
     )
 }
 
-export default FlipControls
+export default PatternControls

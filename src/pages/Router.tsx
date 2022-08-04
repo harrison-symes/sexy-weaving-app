@@ -1,22 +1,25 @@
 import { useSelector } from "react-redux"
-import ScaleBoard from "../components/Board/ScaleBoard"
-import { getAreSettingsConfirmed } from "../selectors/settings.selectors"
-import BoardFlip from "./BoardFlip"
-import BoardScale from "./BoardScale"
+import { getCurrentStage } from "../selectors/router.selectors"
+import SelectColour from "./SelectColour"
+import SelectPattern from "./SelectPattern"
+import SelectScale from "./SelectScale"
+import Weave from "./Weave"
 
 const Router = () => {
-    const areSettingsConfirmed = useSelector(getAreSettingsConfirmed)
+    const stage = useSelector(getCurrentStage)
 
-    if (!areSettingsConfirmed) {
-        return (
-            <BoardScale />
-        )
+    switch(stage) {
+        case "SCALE":
+            return <SelectScale />
+        case "PATTERN":
+            return <SelectPattern />
+        case "COLOUR":
+            return <SelectColour />
+        case "WEAVE":
+            return <Weave />
+        default:
+            return null
     }
-
-
-    return (
-        <BoardFlip />
-    )
 }
 
 export default Router

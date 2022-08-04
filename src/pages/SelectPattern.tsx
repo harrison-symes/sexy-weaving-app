@@ -1,14 +1,14 @@
 import FlipBoard from "../components/Board/FlipBoard"
-import FlipControls from "../components/Controls/FlipControls"
+import PatternControls from "../components/Controls/PatternControls"
 
-const BoardFlip = () => {
+const SelectPattern = () => {
     return (
         <div>
             <h1 className="page-header">Choose your pattern</h1>
             <FlipBoard />
-            <FlipControls />
+            <PatternControls />
         </div>
     )
 }
 
-export default BoardFlip
+export default SelectPattern

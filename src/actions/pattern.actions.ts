@@ -10,3 +10,5 @@ export const flipPatternCell = createAction<{
 export const flipAllUp = createAction("FLIP_ALL_UP")
 
 export const flipAllDown = createAction("FLIP_ALL_DOWN")
+
+export const confirmPattern = createAction("CONFIRM_PATTERN")

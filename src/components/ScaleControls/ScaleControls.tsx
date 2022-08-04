@@ -4,7 +4,7 @@ import { getHeight, getWidth } from "../../selectors/settings.selectors"
 import HeightAdjuster from "./HeightAdjuster"
 import WidthAdjuster from "./WidthAdjuster"
 
-const BoardControls = () => {
+const ScaleControls = () => {
     const dispatch = useDispatch()
     const width = useSelector(getWidth)
     const height = useSelector(getHeight)
@@ -22,4 +22,4 @@ const BoardControls = () => {
     )
 }
 
-export default BoardControls
+export default ScaleControls

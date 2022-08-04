@@ -91,24 +91,31 @@
 }
 
 .board-controls {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
+  height: 80px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .board-control {
-  padding: 8px;
   max-width: 300px;
 }
 
 .board-control__submit {
   background-color: lightgreen;
   align-self: center;
-  height: 60px;
-  border-radius: 30px;
+  height: 70px;
+  border-radius: 35px;
   border: none;
+  font-size: 20px;
+  font-weight: 700;
+  min-width: 70px;
+  padding: 8px 12px;
 }
 
 .board-control__buttons {
@@ -116,6 +123,7 @@
   align-items: center;
   justify-content: space-around;
   height: 100%;
+
   align-self: center;
 }
 
@@ -124,13 +132,13 @@
   width: 100%;
   max-width: 60px;
   line-height: 16px;
-  height: 30px;
-  width: 30px;
+  min-width: 32px;
+  min-height: 32px;
   text-align: center;
   font-size: 16px;
   margin-left: 8px;
   margin-right: 8px;
-  border-radius: 15px;
+  border-radius: 16px;
   background-color: #dddddd
 }
 

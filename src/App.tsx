@@ -4,8 +4,9 @@ import './App.css';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from "./reducers/index"
 import { Provider } from 'react-redux';
-import WidthAdjuster from './components/WidthAdjuster';
-import HeightAdjuster from './components/HeightAdjuster';
+import WidthAdjuster from './components/Controls/WidthAdjuster';
+import HeightAdjuster from './components/Controls/HeightAdjuster';
+import Board from './components/Board/Board';
 
 function App() {
   const store = configureStore({
@@ -19,8 +20,7 @@ function App() {
           <h1>Sexy Weaving App</h1>
         </header>
       </div>
-      <WidthAdjuster />
-      <HeightAdjuster />
+      <Board />
     </Provider>
   );
 }

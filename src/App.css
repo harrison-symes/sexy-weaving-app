@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -15,7 +19,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +39,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.board-view {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.board-container {
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-row {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board-cell {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid black;
+}
+
+.board-controls {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.board-control {
+  border: 1px solid black;
+  padding: 8px;
+  max-width: 300px;
+}
+
+.board-control__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.board-control__button {
+  width: 100%;
+  max-width: 60px;
+  line-height: 100%;
+  height: 16px;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.board-control__text {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
 }

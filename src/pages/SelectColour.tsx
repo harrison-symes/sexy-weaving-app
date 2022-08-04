@@ -1,9 +1,11 @@
 import ColourControls from "../components/ColourControls/ColourControls"
+import ColourSelection from "../components/ColourControls/ColourSelection"
 
 const SelectColour = () => {
     return (
         <div>
             <h1 className="page-header">Select colours (WIP)</h1>
+            <ColourSelection />
             <ColourControls />
         </div>
     )

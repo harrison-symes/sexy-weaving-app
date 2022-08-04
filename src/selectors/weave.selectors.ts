@@ -3,7 +3,9 @@ import { TStoreState } from "../reducers";
 
 export const getWeaveRow = (state: TStoreState) => {
     const row = state.weave.row
-    const total = state.pattern.board.length - 1
+    const total = state.pattern.board.length
 
-    return total - row
+    const rowToHighlight = row % total
+
+    return state.pattern.board.length -1 - rowToHighlight
 }

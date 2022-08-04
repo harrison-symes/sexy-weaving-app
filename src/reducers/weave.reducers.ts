@@ -10,14 +10,9 @@ export const initialState: IWeaveState = {
 }
 
 export const weaveReducer = reducerWithInitialState(initialState)
-    .case(nextWeaveRow, (state, payload) => {
-
-        const newRow = state.row === payload.maxRows - 1 
-            ? 0
-            : state.row + 1
-
+    .case(nextWeaveRow, (state) => {
         return {
             ...state,
-            row: newRow
+            row: state.row + 1
         }
     })

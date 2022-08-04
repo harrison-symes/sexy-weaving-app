@@ -4,11 +4,11 @@ import { getHeight } from "../../selectors/settings.selectors"
 
 const WeaveControls = () => {
     const dispatch = useDispatch()
-    const height = useSelector(getHeight)
 
     const onNext = () => {
-        dispatch(nextWeaveRow({maxRows: height}))
+        dispatch(nextWeaveRow())
     }
+    
     return (
         <div className="board-controls">
             <button onClick={onNext} className="board-control__submit">Next</button>

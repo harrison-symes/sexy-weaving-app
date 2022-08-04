@@ -9,3 +9,8 @@ export const decreaseWidth = createAction("DECREASE_WIDTH")
 export const increaseHeight = createAction("INCREASE_HEIGHT")
 
 export const decreaseHeight = createAction("DECREASE_HEIGHT")
+
+export const confirmSettings = createAction<{
+    width: number;
+    height: number;
+}>("CONFIRM_SETTINGS")

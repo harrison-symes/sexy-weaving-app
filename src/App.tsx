@@ -6,7 +6,10 @@ import reducer from "./reducers/index"
 import { Provider } from 'react-redux';
 import WidthAdjuster from './components/Controls/WidthAdjuster';
 import HeightAdjuster from './components/Controls/HeightAdjuster';
-import Board from './components/Board/Board';
+import ScaleBoard from './components/Board/ScaleBoard';
+import BoardScale from './pages/BoardScale';
+import BoardFlip from './pages/BoardFlip';
+import Router from './pages/Router';
 
 function App() {
   const store = configureStore({
@@ -20,7 +23,7 @@ function App() {
           <h1>Sexy Weaving App</h1>
         </header>
       </div>
-      <Board />
+      <Router />
     </Provider>
   );
 }

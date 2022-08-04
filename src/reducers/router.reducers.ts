@@ -3,6 +3,7 @@ import { confirmPattern, flipAllDown, flipAllUp, flipPatternCell } from "../acti
 import { confirmSettings } from "../actions/settings.actions";
 import { cloneDeep } from "lodash"
 import { confirmColours } from "../actions/colours.actions";
+import { resetApp } from "../actions/weave.actions";
 
 export interface IRouterState {
     stage: "SCALE" | "PATTERN" | "COLOUR" | "WEAVE"
@@ -13,6 +14,9 @@ export const initialState: IRouterState = {
 }
 
 export const routerReducer = reducerWithInitialState(initialState)
+    .case(resetApp, () => ({
+        ...initialState
+    }))
     .case(confirmSettings, (state) => ({
         ...state,
         stage: "PATTERN"

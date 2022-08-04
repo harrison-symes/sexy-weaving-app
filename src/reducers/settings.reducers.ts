@@ -1,5 +1,6 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { confirmSettings, decreaseHeight, decreaseWidth, increaseHeight, increaseWidth } from "../actions/settings.actions";
+import { resetApp } from "../actions/weave.actions";
 import { MAX_WIDTH, MIN_WIDTH, MAX_HEIGHT, MIN_HEIGHT } from "../constants/settings.constants";
 
 export interface ISettingsState {
@@ -13,6 +14,9 @@ export const initialState: ISettingsState = {
 }
 
 export const settingsReducer = reducerWithInitialState(initialState)
+    .case(resetApp, () => ({
+        ...initialState
+    }))
     .case(increaseWidth, (state) => {
         const newWidth = state.width + 1
         if (newWidth > MAX_WIDTH) {

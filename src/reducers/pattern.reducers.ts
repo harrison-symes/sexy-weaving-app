@@ -2,6 +2,7 @@ import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { flipAllDown, flipAllUp, flipPatternCell } from "../actions/pattern.actions";
 import { confirmSettings } from "../actions/settings.actions";
 import { cloneDeep } from "lodash"
+import { resetApp } from "../actions/weave.actions";
 
 export interface IPatternState {
     board: Array<Array<boolean>>;
@@ -14,6 +15,9 @@ export const initialState: IPatternState = {
 }
 
 export const patternReducer = reducerWithInitialState(initialState)
+    .case(resetApp, () => ({
+        ...initialState
+    }))
     .case(confirmSettings, (state, payload) => {
         const board = new Array(payload.height).fill(0).map(() => new Array(payload.width).fill(false))
 

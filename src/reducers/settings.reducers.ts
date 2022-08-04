@@ -1,5 +1,6 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { decreaseHeight, decreaseWidth, increaseHeight, increaseWidth } from "../actions/settings.actions";
+import { MAX_WIDTH, MIN_WIDTH, MAX_HEIGHT, MIN_HEIGHT } from "../constants/settings.constants";
 
 export interface ISettingsState {
     width: number;
@@ -10,11 +11,6 @@ export const initialState: ISettingsState = {
     width: 8,
     height: 8,
 }
-
-const MAX_WIDTH = 10
-const MIN_WIDTH = 4
-const MAX_HEIGHT = 10
-const MIN_HEIGHT = 4
 
 export const settingsReducer = reducerWithInitialState(initialState)
     .case(increaseWidth, (state) => {

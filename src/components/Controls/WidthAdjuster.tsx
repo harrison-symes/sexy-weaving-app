@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { decreaseWidth, increaseWidth } from "../../actions/settings.actions"
+import { MAX_WIDTH, MIN_WIDTH } from "../../constants/settings.constants"
 import { getWidth } from "../../selectors/settings.selectors"
 
 const WidthAdjuster = () => {
@@ -13,8 +14,8 @@ const WidthAdjuster = () => {
         <div className="board-control">
             <h1 className="board-control__text">Width: {width}</h1>
             <div className="board-control__buttons">
-                <button className="board-control__button" onClick={onDecrease}>{"-"}</button>
-                <button className="board-control__button" onClick={onIncrease}>{"+"}</button>
+                <button disabled={width <= MIN_WIDTH} className="board-control__button" onClick={onDecrease}>{"-"}</button>
+                <button disabled={width >= MAX_WIDTH} className="board-control__button" onClick={onIncrease}>{"+"}</button>
             </div>
         </div>
     )

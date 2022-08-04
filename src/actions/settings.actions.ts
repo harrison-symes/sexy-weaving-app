@@ -1,6 +1,5 @@
 import actionCreatorFactory from "typescript-fsa";
 
-
 const createAction = actionCreatorFactory("SETTINGS")
 
 export const increaseWidth = createAction("INCREASE_WIDTH")

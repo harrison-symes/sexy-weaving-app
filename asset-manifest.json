@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/loomio/static/css/main.073c9b0a.css",
-    "main.js": "/loomio/static/js/main.25193e1a.js",
+    "main.js": "/loomio/static/js/main.b1a4cf42.js",
     "static/js/787.51ee202f.chunk.js": "/loomio/static/js/787.51ee202f.chunk.js",
-    "static/media/logo.svg": "/loomio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/loomio/index.html",
     "main.073c9b0a.css.map": "/loomio/static/css/main.073c9b0a.css.map",
-    "main.25193e1a.js.map": "/loomio/static/js/main.25193e1a.js.map",
+    "main.b1a4cf42.js.map": "/loomio/static/js/main.b1a4cf42.js.map",
     "787.51ee202f.chunk.js.map": "/loomio/static/js/787.51ee202f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.25193e1a.js"
+    "static/js/main.b1a4cf42.js"
   ]
 }

@@ -5,7 +5,7 @@ const SelectColour = () => {
     return (
         <div>
             <h1 className="page-header">Select colours</h1>
-            <ColourSelection />
+            <ColourSelection canPickColours={true} />
             <ColourControls />
         </div>
     )

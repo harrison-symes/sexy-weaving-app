@@ -6,6 +6,7 @@ import { updateColor } from "../../actions/colours.actions";
 interface ColourPickerProps {
     colour: string;
     number: number;
+    canEdit: boolean;
 }
 
 const ChosenColour = (props: ColourPickerProps) => {
@@ -21,7 +22,7 @@ const ChosenColour = (props: ColourPickerProps) => {
     }
 
     return (
-        <div onClick={() => setIsOpen(true)} className="chosen-color" style={{ backgroundColor: props.colour }}>
+        <div onClick={() => setIsOpen(props.canEdit)} className="chosen-color" style={{ backgroundColor: props.colour }}>
             {isOpen && <CompactPicker       
                 color={props.colour}
                 onChange={color => onChange(color.hex)}

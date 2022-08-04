@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  color: #333333
 }
 
 .App {
@@ -18,18 +19,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #FFF1E6;
   /* min-height: 20vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #333333;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #DFE7FD;
 }
 
 @keyframes App-logo-spin {
@@ -72,13 +73,13 @@
 .board-row--active {
   margin-top: 8px;
   margin-bottom: 8px;
-  border: 2px solid pink;
+  border: 2px solid #FAD2E1;
 }
 
 .board-cell {
   box-sizing: border-box;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid #333333;
   background-color: #ffffff;
   font-size: 24px;
   display: flex;
@@ -86,7 +87,7 @@
   align-items: center;
 }
 .board-cell--flipped {
-  background-color: #555555;
+  background-color: #333333;
   color: #ffffff;
 }
 
@@ -107,7 +108,8 @@
 }
 
 .board-control__submit {
-  background-color: lightgreen;
+  background-color: #E2ECE9;
+  cursor: pointer;
   align-self: center;
   height: 70px;
   border-radius: 35px;
@@ -128,6 +130,7 @@
 }
 
 .board-control__button {
+  cursor: pointer;
   border:none;
   width: 100%;
   max-width: 60px;
@@ -143,6 +146,7 @@
 }
 
 .board-control__button--large {
+  cursor: pointer;
   border :none;
   width: 100%;
   max-width: 200px;

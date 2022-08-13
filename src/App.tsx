@@ -4,11 +4,6 @@ import './App.css';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from "./reducers/index"
 import { Provider } from 'react-redux';
-import WidthAdjuster from './components/ScaleControls/WidthAdjuster';
-import HeightAdjuster from './components/ScaleControls/HeightAdjuster';
-import ScaleBoard from './components/Board/ScaleBoard';
-import SelectScale from './pages/SelectScale';
-import SelectPattern from './pages/SelectPattern';
 import Router from './pages/Router';
 
 function App() {
@@ -20,7 +15,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <header className="App-header">
-          <h1>Sexy Weaving App</h1>
+          <h1>🐞 Weevil 🐞</h1>
         </header>
       </div>
       <Router />

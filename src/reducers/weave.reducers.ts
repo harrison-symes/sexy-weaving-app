@@ -1,4 +1,5 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
+import { loadWeave } from "../actions/savedPatterns.action";
 import { nextWeaveRow, previousWeaveRow, resetApp } from "../actions/weave.actions";
 
 export interface IWeaveState {
@@ -22,4 +23,8 @@ export const weaveReducer = reducerWithInitialState(initialState)
     .case(previousWeaveRow, (state) => ({
         ...state,
         row: state.row !== 0 ? state.row - 1 : 0
+    }))
+    .case(loadWeave, (state, payload) => ({
+        ...state,
+        row: 0,
     }))

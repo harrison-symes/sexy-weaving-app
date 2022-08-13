@@ -1,6 +1,7 @@
 import { stat } from "fs";
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { addColor, updateColor } from "../actions/colours.actions";
+import { loadWeave } from "../actions/savedPatterns.action";
 import { resetApp } from "../actions/weave.actions";
 
 export interface ColourSelection {
@@ -44,3 +45,7 @@ export const coloursReducer = reducerWithInitialState(initialState)
             colours
         }
     })
+    .case(loadWeave, (state, payload) => ({
+        ...state,
+        colours: payload.colours
+    }))

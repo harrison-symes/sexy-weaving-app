@@ -29,6 +29,22 @@
   color: #333333;
 }
 
+.App-subheader {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-subheader button {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 8px;
+  color: #FFF1E6;
+  background-color: #333333
+}
+
 h1 {
   margin-bottom: 8px; 
   margin-top: 8px;
@@ -225,4 +241,27 @@ h2 {
   height: 10px;
   width: 100%;
   margin-bottom: 8px;
+}
+
+.load-pattern__controls {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-pattern__button {
+  min-width: 60px;
+  padding: 8px 12px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  margin: auto 8px;
+}
+
+.load-board__container {
+  border-bottom: 3px solid #333333;
+  margin-bottom: 16px;
+  padding: 20px 4px;
 }

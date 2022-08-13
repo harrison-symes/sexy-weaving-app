@@ -4,9 +4,10 @@ import { confirmSettings } from "../actions/settings.actions";
 import { cloneDeep } from "lodash"
 import { confirmColours } from "../actions/colours.actions";
 import { resetApp } from "../actions/weave.actions";
+import { goToSavedPage, loadWeave, returnToHome } from "../actions/savedPatterns.action";
 
 export interface IRouterState {
-    stage: "SCALE" | "PATTERN" | "COLOUR" | "WEAVE"
+    stage: "SCALE" | "PATTERN" | "COLOUR" | "WEAVE" | "SAVED"
 } 
 
 export const initialState: IRouterState = {
@@ -14,6 +15,9 @@ export const initialState: IRouterState = {
 }
 
 export const routerReducer = reducerWithInitialState(initialState)
+    .case(returnToHome, () => ({
+        stage: "SCALE"
+    }))
     .case(resetApp, () => ({
         ...initialState
     }))
@@ -26,6 +30,14 @@ export const routerReducer = reducerWithInitialState(initialState)
         stage: "COLOUR"
     }))
     .case(confirmColours, (state) => ({
+        ...state,
+        stage: "WEAVE"
+    }))
+    .case(goToSavedPage, (state) => ({
+        ...state,
+        stage: "SAVED"
+    }))
+    .case(loadWeave, (state, payload) => ({
         ...state,
         stage: "WEAVE"
     }))

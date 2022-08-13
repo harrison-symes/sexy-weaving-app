@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { getCurrentStage } from "../selectors/router.selectors"
+import { LoadPattern } from "./LoadPattern"
 import SelectColour from "./SelectColour"
 import SelectPattern from "./SelectPattern"
 import SelectScale from "./SelectScale"
@@ -17,6 +18,8 @@ const Router = () => {
             return <SelectColour />
         case "WEAVE":
             return <Weave />
+        case "SAVED":
+            return <LoadPattern />
         default:
             return null
     }

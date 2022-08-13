@@ -3,6 +3,7 @@ import { flipAllDown, flipAllUp, flipPatternCell } from "../actions/pattern.acti
 import { confirmSettings } from "../actions/settings.actions";
 import { cloneDeep } from "lodash"
 import { resetApp } from "../actions/weave.actions";
+import { loadWeave } from "../actions/savedPatterns.action";
 
 export interface IPatternState {
     board: Array<Array<boolean>>;
@@ -51,3 +52,8 @@ export const patternReducer = reducerWithInitialState(initialState)
             board
         }
     })
+    .case(loadWeave, (state, payload) => ({
+        ...state,
+        board: payload.pattern,
+        isConfirmed: true,
+    }))

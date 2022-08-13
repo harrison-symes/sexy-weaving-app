@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { confirmSettings } from "../../actions"
+import { goToSavedPage } from "../../actions/savedPatterns.action"
 import { getHeight, getWidth } from "../../selectors/settings.selectors"
 import HeightAdjuster from "./HeightAdjuster"
-import WidthAdjuster from "./WidthAdjuster"
 
 const ScaleControls = () => {
     const dispatch = useDispatch()
@@ -12,10 +12,17 @@ const ScaleControls = () => {
     const onConfirm = () => dispatch(confirmSettings({
         width, height
     }))
+
+    const onLoadPatterns = () => {
+        dispatch(goToSavedPage())
+    }
     
     return (
         <div className="board-controls">
-            <WidthAdjuster />
+            {/* <WidthAdjuster /> */}
+            <div className="board-control__buttons">
+                <button className="board-control__button" onClick={onLoadPatterns}>Load</button>
+            </div>
             <button onClick={onConfirm} className="board-control__submit">Confirm</button>
             <HeightAdjuster />
         </div>

@@ -1,15 +1,26 @@
 import { TStoreState } from "../reducers";
 
+export const getColourSelection = (state: TStoreState) => state.colours.colours
+
 export const getColours = (state: TStoreState) => state.colours.colours
+    .reduce((accum, color) => {
+        for (let i = 0; i < color.count; i++) {
+            accum.push(color.colour)
+        }
+
+        return [...accum]
+    }, [] as Array<string>)
+
 
 export const getActiveColor = (state: TStoreState) => {
-    if (state.colours.colours.length === 0) {
+    const selectedColours = getColours(state)
+    if (selectedColours.length === 0) {
         return "white"
     }
 
     const row = state.weave.row
 
-    const colorIndex = row % state.colours.colours.length
+    const colorIndex = row % selectedColours.length
 
-    return state.colours.colours[colorIndex]
+    return selectedColours[colorIndex]
 }

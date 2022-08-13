@@ -3,8 +3,13 @@ import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { addColor, updateColor } from "../actions/colours.actions";
 import { resetApp } from "../actions/weave.actions";
 
+export interface ColourSelection {
+    colour: string;
+    count: number;
+}
+
 export interface IColoursState {
-    colours: Array<string>;
+    colours: Array<ColourSelection>;
 } 
 
 export const initialState: IColoursState = {
@@ -12,16 +17,27 @@ export const initialState: IColoursState = {
 }
 
 export const coloursReducer = reducerWithInitialState(initialState)
-    .case(resetApp, (state) => ({
+    .case(resetApp, () => ({
         ...initialState
     }))
     .case(addColor, (state, payload) => ({
         ...state,
-        colours: [...state.colours, payload.color]
+        colours: [
+            ...state.colours, {
+                colour: payload.color,
+                count: 1
+            }
+        ]
     }))
     .case(updateColor, (state, payload) => {
         const colours = [...state.colours]
-        colours[payload.number - 1] = payload.color
+        const targetColour = colours[payload.number - 1]
+
+        colours[payload.number - 1] = {
+            ...targetColour,
+            colour: payload.color,
+            count: payload.count
+        }
 
         return {
             ...state,

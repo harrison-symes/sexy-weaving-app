@@ -29,6 +29,15 @@
   color: #333333;
 }
 
+h1 {
+  margin-bottom: 8px; 
+  margin-top: 8px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
 .App-link {
   color: #DFE7FD;
 }
@@ -170,15 +179,42 @@
 
 .color-selection {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+}
+
+.color-selection--editable {
+  flex-direction: column;
+}
+
+.color-selection-container {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.color-selector-button {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+
+.color-selection-container button {
+  text-align: center;
+  font-size: 16px;
+}
+
 .chosen-color {
   border: 1px solid #333333;
-  height: 35px;
-  width: 35px;
-  margin: 4px;
+  height: 44px;
+  width: 44px;
+  margin: 8px;
   display: flex;
   justify-content: center;
   align-items: center;

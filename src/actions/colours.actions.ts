@@ -8,5 +8,6 @@ export const addColor = createAction<{color: string}>("ADD_COLOUR")
 
 export const updateColor = createAction<{
     color: string;
+    count: number;
     number: number;
 }>("UPDATE_COLOUR")

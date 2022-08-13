@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sexy-weaving-app/static/css/main.047b2591.css",
-    "main.js": "/sexy-weaving-app/static/js/main.ba8ab970.js",
+    "main.js": "/sexy-weaving-app/static/js/main.b5fc0d32.js",
     "static/js/787.51ee202f.chunk.js": "/sexy-weaving-app/static/js/787.51ee202f.chunk.js",
     "index.html": "/sexy-weaving-app/index.html",
     "main.047b2591.css.map": "/sexy-weaving-app/static/css/main.047b2591.css.map",
-    "main.ba8ab970.js.map": "/sexy-weaving-app/static/js/main.ba8ab970.js.map",
+    "main.b5fc0d32.js.map": "/sexy-weaving-app/static/js/main.b5fc0d32.js.map",
     "787.51ee202f.chunk.js.map": "/sexy-weaving-app/static/js/787.51ee202f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.047b2591.css",
-    "static/js/main.ba8ab970.js"
+    "static/js/main.b5fc0d32.js"
   ]
 }

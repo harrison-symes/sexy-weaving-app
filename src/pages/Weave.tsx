@@ -1,12 +1,13 @@
 import WeaveBoard from "../components/Board/WeaveBoard"
-import ColourControls from "../components/ColourControls/ColourControls"
 import ColourSelection from "../components/ColourControls/ColourSelection"
 import WeaveControls from "../components/WeaveControls/WeaveControls"
+
+import {FcCloth} from "react-icons/fc"
 
 const Weave = () => {
     return (
         <div>
-            <h1 className="page-header">Get weaving :)</h1>
+            <h1 className="page-header"><FcCloth /> Get weaving <FcCloth /></h1>
             <WeaveBoard />
             <ColourSelection canPickColours={false} />
             <WeaveControls />

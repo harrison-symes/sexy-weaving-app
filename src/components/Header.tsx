@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux"
 import { resetApp } from "../actions/weave.actions"
 
+import { GiYarn, GiRolledCloth } from "react-icons/gi"
+
 export const Header = () => {
     const dispatch = useDispatch()
     
@@ -13,7 +15,7 @@ export const Header = () => {
             <h1>🐞 Weevil 🐞</h1>
             <div className="App-subheader">
                 <button onClick={onReset}>Reset</button>
-                <h2>Putting the "tech" in "textiles"</h2>
+                <h2><GiRolledCloth />Putting the "tech" in "textiles"<GiYarn /></h2>
             </div>
         </header>
     )

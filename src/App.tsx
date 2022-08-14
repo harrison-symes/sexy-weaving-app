@@ -14,6 +14,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Header />
+        <div className="controls-filler"></div>
       </div>
       <Router />
     </Provider>

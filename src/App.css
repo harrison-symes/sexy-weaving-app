@@ -79,12 +79,12 @@ h2 {
   margin-bottom: 16px;
   display: flex;
   align-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .board-container {
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -121,6 +121,7 @@ h2 {
   left: 0;
   width: 100vw;
   box-shadow: 0px 0px 8px 4px #cccccc;
+  background-color: #cccccc;
   height: 80px;
   display: flex;
   align-items: flex-start;
@@ -264,4 +265,18 @@ h2 {
   border-bottom: 3px solid #333333;
   margin-bottom: 16px;
   padding: 20px 4px;
+}
+
+.controls-filler {
+  height: 40px;
+}
+
+.select-control {
+  min-width: 60px;
+  padding: 4px 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  background-color: #F0EFEB;
+  border-radius: 4px;
 }

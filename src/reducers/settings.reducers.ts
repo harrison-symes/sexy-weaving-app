@@ -1,6 +1,6 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { loadWeave } from "../actions/savedPatterns.action";
-import { confirmSettings, decreaseHeight, decreaseWidth, increaseHeight, increaseWidth } from "../actions/settings.actions";
+import { confirmSettings, decreaseHeight, decreaseWidth, increaseHeight, increaseWidth, setHeight } from "../actions/settings.actions";
 import { resetApp } from "../actions/weave.actions";
 import { MAX_WIDTH, MIN_WIDTH, MAX_HEIGHT, MIN_HEIGHT } from "../constants/settings.constants";
 
@@ -62,6 +62,10 @@ export const settingsReducer = reducerWithInitialState(initialState)
             height: newHeight
         }
     })
+    .case(setHeight, (state, payload) => ({
+        ...state,
+        height: payload
+    }))
     .case(loadWeave, (state, payload) => ({
         ...state,
         height: payload.height,

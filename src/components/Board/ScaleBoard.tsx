@@ -1,6 +1,5 @@
-import * as React from "react"
 import { useSelector } from "react-redux"
-import { MAX_HEIGHT, MAX_WIDTH } from "../../constants/settings.constants"
+import { MAX_WIDTH } from "../../constants/settings.constants"
 import useBrowserWidth from "../../hooks/useBrowserWidth"
 import { getHeight, getWidth } from "../../selectors/settings.selectors"
 
@@ -14,15 +13,9 @@ const ScaleBoard = () => {
 
     const cellWidth = BOARD_WIDTH / MAX_WIDTH
 
-    const boardHeight = cellWidth * MAX_HEIGHT
-
     return (
         <>
-            <div className="board-view" style={{
-                    // width: boardHeight,
-                    height: boardHeight
-                }}
-            >
+            <div className="board-view">
                 <div className="board-container">
                     {new Array(height).fill(0).map(() => (
                         <div className="board-row">

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { getColours, getColourSelection } from "../../selectors/colours.selectors"
+import { getColourSelection } from "../../selectors/colours.selectors"
 import ChosenColour from "./ChosenColour"
 import ColourPicker from "./ColourPicker"
 import cn from "classnames"

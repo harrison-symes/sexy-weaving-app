@@ -1,4 +1,3 @@
-import { stat } from "fs";
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { addColor, updateColor } from "../actions/colours.actions";
 import { loadWeave } from "../actions/savedPatterns.action";

@@ -1,7 +1,6 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
-import { confirmPattern, flipAllDown, flipAllUp, flipPatternCell } from "../actions/pattern.actions";
+import { confirmPattern } from "../actions/pattern.actions";
 import { confirmSettings } from "../actions/settings.actions";
-import { cloneDeep } from "lodash"
 import { confirmColours } from "../actions/colours.actions";
 import { resetApp } from "../actions/weave.actions";
 import { goToSavedPage, loadWeave, returnToHome } from "../actions/savedPatterns.action";

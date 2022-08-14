@@ -1,9 +1,7 @@
-import { useDispatch, useSelector } from "react-redux"
-import { flipPatternCell } from "../../actions/pattern.actions"
-import { MAX_WIDTH, MAX_HEIGHT } from "../../constants/settings.constants"
+import { useSelector } from "react-redux"
+import { MAX_WIDTH } from "../../constants/settings.constants"
 import useBrowserWidth from "../../hooks/useBrowserWidth"
 import { getPatternBoard } from "../../selectors/pattern.selectors"
-import { getWidth, getHeight } from "../../selectors/settings.selectors"
 import cn from "classnames"
 import { getWeaveRow } from "../../selectors/weave.selectors"
 import { getActiveColor } from "../../selectors/colours.selectors"
@@ -19,15 +17,9 @@ const WeaveBoard = () => {
 
     const cellWidth = BOARD_WIDTH / MAX_WIDTH
 
-    const boardHeight = cellWidth * MAX_HEIGHT
-
     return (
         <>
-            <div className="board-view" style={{
-                    // width: boardHeight,
-                    height: boardHeight
-                }}
-            >
+            <div className="board-view">
                 <div className="board-container">
                     {board.map((row, rowNumber) => (
                         <div>

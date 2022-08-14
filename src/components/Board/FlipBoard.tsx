@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { flipPatternCell } from "../../actions/pattern.actions"
-import { MAX_WIDTH, MAX_HEIGHT } from "../../constants/settings.constants"
+import { MAX_WIDTH } from "../../constants/settings.constants"
 import useBrowserWidth from "../../hooks/useBrowserWidth"
 import { getPatternBoard } from "../../selectors/pattern.selectors"
-import { getWidth, getHeight } from "../../selectors/settings.selectors"
 import cn from "classnames"
 
 const BOARD_MAX = 1000
@@ -16,8 +15,6 @@ const FlipBoard = () => {
 
     const cellWidth = BOARD_WIDTH / MAX_WIDTH
 
-    const boardHeight = cellWidth * MAX_HEIGHT
-
     const onCellClick = (row: number, col: number) => {
         dispatch(flipPatternCell({
             row, col
@@ -26,11 +23,7 @@ const FlipBoard = () => {
 
     return (
         <>
-            <div className="board-view" style={{
-                    // width: boardHeight,
-                    height: boardHeight
-                }}
-            >
+            <div className="board-view">
                 <div className="board-container">
                     {board.map((row, rowNumber) => (
                         <div className="board-row">

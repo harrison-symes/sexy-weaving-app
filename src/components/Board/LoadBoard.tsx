@@ -1,5 +1,4 @@
-import * as React from "react"
-import { MAX_HEIGHT, MAX_WIDTH } from "../../constants/settings.constants"
+import { MAX_WIDTH } from "../../constants/settings.constants"
 import useBrowserWidth from "../../hooks/useBrowserWidth"
 import { ColourSelection } from "../../reducers/colours.reducers"
 import cn from "classnames"
@@ -7,7 +6,6 @@ import { isArray } from "lodash"
 import { LoadColourPreview } from "../ColourControls/LoadColourPreview"
 import { useDispatch } from "react-redux"
 import { loadWeave } from "../../actions/savedPatterns.action"
-import { deleteSavedWeave } from "../../localstorage/savedPatterns"
 
 const BOARD_MAX = 500
 
@@ -31,8 +29,6 @@ const LoadBoard = (props: LoadBoardProps) => {
 
     const cellWidth = BOARD_WIDTH / MAX_WIDTH
 
-    const boardHeight = cellWidth * MAX_HEIGHT
-
     if (!isArray(pattern)) {
         return null
     }
@@ -43,11 +39,7 @@ const LoadBoard = (props: LoadBoardProps) => {
 
     return (
         <div className="load-board__container">
-            <div className="board-view" style={{
-                    // width: boardHeight,
-                    height: boardHeight
-                }}
-            >
+            <div className="board-view">
                 <div className="board-container">
                     {pattern.map((row) => (
                         <div className="board-row">

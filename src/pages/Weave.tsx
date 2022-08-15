@@ -7,7 +7,7 @@ import {FcCloth} from "react-icons/fc"
 const Weave = () => {
     return (
         <div>
-            <h1 className="page-header"><FcCloth /> Get weaving <FcCloth /></h1>
+            <h1 className="page-header"><FcCloth />Time to weave!<FcCloth /></h1>
             <WeaveBoard />
             <ColourSelection canPickColours={false} />
             <WeaveControls />

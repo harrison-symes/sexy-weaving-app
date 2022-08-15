@@ -12,7 +12,7 @@
     "@types/classnames": "^2.3.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.47",
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.0.17",
     "@types/react-color": "^3.0.6",
     "@types/react-dom": "^18.0.6",
     "@types/react-icons": "^3.0.0",

@@ -6,7 +6,7 @@ import { GiScales } from "react-icons/gi"
 const SelectScale = () => {
     return (
         <div>
-            <h1 className="page-header"><GiScales /> Choose your scale <GiScales /></h1>
+            <h1 className="page-header"><GiScales />Choose scale<GiScales /></h1>
             <ScaleBoard />
             <ScaleControls />
         </div>

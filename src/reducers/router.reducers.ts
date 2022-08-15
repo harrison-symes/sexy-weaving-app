@@ -4,9 +4,12 @@ import { confirmSettings } from "../actions/settings.actions";
 import { confirmColours } from "../actions/colours.actions";
 import { resetApp } from "../actions/weave.actions";
 import { goToSavedPage, loadWeave, returnToHome } from "../actions/savedPatterns.action";
+import { goToStage } from "../actions/router.actions";
+
+export type Stages = "SCALE" | "PATTERN" | "COLOUR" | "WEAVE" | "SAVED";
 
 export interface IRouterState {
-    stage: "SCALE" | "PATTERN" | "COLOUR" | "WEAVE" | "SAVED"
+    stage: Stages
 } 
 
 export const initialState: IRouterState = {
@@ -14,6 +17,10 @@ export const initialState: IRouterState = {
 }
 
 export const routerReducer = reducerWithInitialState(initialState)
+    .case(goToStage, (state, stage) => ({
+        ...state,
+        stage
+    }))
     .case(returnToHome, () => ({
         stage: "SCALE"
     }))

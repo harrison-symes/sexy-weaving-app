@@ -5,6 +5,7 @@ import { patternReducer, IPatternState } from "./pattern.reducers"
 import { routerReducer, IRouterState } from "./router.reducers"
 import { coloursReducer, IColoursState } from "./colours.reducers"
 import { weaveReducer, IWeaveState } from "./weave.reducers"
+import { controlsReducer, IControlsState } from "./controls.reducers"
 
 export interface TStoreState {
     settings: ISettingsState,
@@ -12,6 +13,7 @@ export interface TStoreState {
     router: IRouterState,
     colours: IColoursState,
     weave: IWeaveState,
+    controls: IControlsState,
 }
 
 export default combineReducers<TStoreState>({
@@ -19,5 +21,6 @@ export default combineReducers<TStoreState>({
     pattern: patternReducer,
     router: routerReducer,
     colours: coloursReducer,
-    weave: weaveReducer
+    weave: weaveReducer,
+    controls: controlsReducer,
 })

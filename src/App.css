@@ -118,7 +118,7 @@ h2 {
   align-items: center;
 }
 .board-cell--flipped {
-  background-color: #333333;
+  background-color: #666666;
   color: #ffffff;
 }
 

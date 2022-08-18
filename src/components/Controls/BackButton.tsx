@@ -1,5 +1,5 @@
 import ControlButton from "./ControlButton"
-import { TiTick } from "react-icons/ti"
+import { MdOutlineKeyboardBackspace } from "react-icons/md"
 import { Stages } from "../../reducers/router.reducers"
 import { useDispatch } from "react-redux";
 import { goToStage } from "../../actions/router.actions";
@@ -14,7 +14,7 @@ const BackButton = (props: IBackButtonProps) => {
     return (
         <ControlButton
             onClick={() => dispatch(goToStage(props.previousStage))}
-            icon={TiTick}
+            icon={MdOutlineKeyboardBackspace}
         />
     )
 }

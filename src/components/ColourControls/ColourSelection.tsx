@@ -18,9 +18,6 @@ const ColourSelection = (props: ColourSelectionProps) => {
             {colours.map((colour, i) => (
                 <ChosenColour canEdit={props.canPickColours} colour={colour.colour} count={colour.count} number={i + 1} />
             ))}
-            {props.canPickColours && colours.length < 8 && (
-                <ColourPicker />
-            )}
         </div>
     )
 }

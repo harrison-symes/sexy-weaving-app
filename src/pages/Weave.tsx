@@ -3,6 +3,11 @@ import ColourSelection from "../components/ColourControls/ColourSelection"
 import WeaveControls from "../components/WeaveControls/WeaveControls"
 
 import {FcCloth} from "react-icons/fc"
+import MobileControl from "../components/Control/MobileControl"
+import BackButton from "../components/Controls/BackButton"
+import NextRowButton from "../components/Controls/NextRowButton"
+import PreviousRowButton from "../components/Controls/PreviousRowButton"
+import SavePatternButton from "../components/Controls/SavePatternButton"
 
 const Weave = () => {
     return (
@@ -11,6 +16,12 @@ const Weave = () => {
             <WeaveBoard />
             <ColourSelection canPickColours={false} />
             <WeaveControls />
+            <MobileControl>
+                <BackButton previousStage="COLOUR" />
+                <SavePatternButton />
+                <PreviousRowButton />
+                <NextRowButton />
+            </MobileControl>
         </div>
     )
 }

@@ -13,9 +13,8 @@ const Weave = () => {
     return (
         <div>
             <h1 className="page-header"><FcCloth />Time to weave!<FcCloth /></h1>
-            <WeaveBoard />
             <ColourSelection canPickColours={false} />
-            <WeaveControls />
+            <WeaveBoard />
             <MobileControl>
                 <BackButton previousStage="COLOUR" />
                 <SavePatternButton />
